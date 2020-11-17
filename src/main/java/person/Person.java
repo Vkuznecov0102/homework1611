@@ -6,7 +6,7 @@ import lombok.Data;
 @AllArgsConstructor
 @Data
 public class Person {
-    private String name;
-    private int age;
-    private boolean isMale;
+    private final String name;
+    private final int age;
+    private final boolean isMale;
 }

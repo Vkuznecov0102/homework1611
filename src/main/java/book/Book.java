@@ -6,9 +6,9 @@ import lombok.Getter;
 @AllArgsConstructor
 @Getter
 public class Book {
-    private String name;
-    private String author;
-    private int numberOfPages;
+    private final String name;
+    private final String author;
+    private final int numberOfPages;
 
     @Override
     public String toString() {

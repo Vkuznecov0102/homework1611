@@ -26,7 +26,7 @@ public class Main {
 
         System.out.println("Мужчины призывного возраста");
         for (Person men : persons) {
-            if (men.getAge() >= 18 && (men.getAge() < 27) && (men.getName().contains("Н"))) {
+            if (men.getAge() >= 18 && (men.getAge() < 27) && (men.getName().contains("Н")) && men.isMale()) {
                 System.out.print(men + " ");
             }
         }
@@ -41,11 +41,11 @@ public class Main {
             }
         }
         int sumAge = 0;
-        double average = 0;
+        double average;
         for (Person women : womenList) {
             sumAge = sumAge + women.getAge();
-            average = sumAge / womenList.size();
         }
+        average = sumAge / womenList.size();
         System.out.println(average);
         System.out.println();
     }
