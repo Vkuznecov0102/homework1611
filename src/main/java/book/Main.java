@@ -73,5 +73,69 @@ public class Main {
         System.out.println("anotherList.contains(abnett) = " + anotherList.contains(abnett));
 
         System.out.println(anotherList);
+
+        //второй день
+
+        Book javaFirst=new Book("Java. Библиотека профессионала","Хорстманн",404);
+        Book javaSecond=new Book("Test Driven: TDD and Acceptance TDD for Java Developers","Lasse Koskela",455);
+        Book javaThird=new Book("Изучаем Java","Берт Бейтс",381);
+        Book javaFourth=new Book("Алгоритмы на Java","Седжвик",479);
+
+       anotherList.add(3,javaFirst);
+       anotherList.add(6,javaSecond);
+       anotherList.add(21,javaThird);
+       anotherList.add(4,javaFourth);
+
+       System.out.println("Индекс делится на три");
+       for(int i=0;i<anotherList.size();i++){
+           if(i%3==0){
+               System.out.println(anotherList.get(i));
+           }
+       }
+       System.out.println();
+
+       System.out.println("Элементы которые равны Java");
+        for(Book elemBook:anotherList){
+            if(elemBook.getName().contains("Java")) {
+                System.out.print(elemBook+" ");
+            }
+        }
+        System.out.println();
+
+        System.out.println("Пропустить первые три книги в списке");
+        for(int i=3;i<anotherList.size();i++){
+            System.out.print(anotherList.get(i));
+        }
+        System.out.println();
+
+        System.out.println("пропустить первые две книги Java");
+        int count=0;
+        for(int i=0;i<anotherList.size();i++){
+            if(anotherList.get(i).getName().contains("Java") && count<2){
+                count++;
+            }
+            else{
+                System.out.print(anotherList.get(i));
+            }
+
+        }
+        System.out.println();
+
+        System.out.println("Возвращаем первую книгу, длина автора которого делится на 3");
+        for(Book bookElem:anotherList){
+            if(bookElem.getAuthor().length()%3==0){
+                System.out.print(bookElem+" ");
+                break;
+            }
+        }
+        System.out.println();
+
+        System.out.println("Возвращаем все книги, длина автора которых делится на 3");
+        for(Book bookElem:anotherList){
+            if(bookElem.getAuthor().length()%3==0){
+                System.out.print(bookElem+" ");
+            }
+        }
+        System.out.println();
     }
 }
